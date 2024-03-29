@@ -8,10 +8,9 @@ investment_file = Path("investments.json")
 #The stock variable is an object
 def fetch_stock_price(symbol) :
     stock = yf.Ticker(symbol)
-    print(stock)
     hist = stock.history(period="3d")
     return hist["Open"][-1]
-fetch_stock_price("tsla")
+
 
 def calculate_shares(investment,price) :
     return investment/price 
@@ -71,6 +70,7 @@ if action =="1" :
     print("saved investment")
 elif action == "2" :
     print("These are your investments!")
+    display_investments()
 
 
 
