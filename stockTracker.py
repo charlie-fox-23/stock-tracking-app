@@ -57,6 +57,20 @@ def display_investments() :
         print(f"Profit or loss:{profit_or_loss}")
         print("-"*30)
         
+action = input("type in 1 to add a investment or type in 2 to view previus investments")
+if action =="1" :
+    stock_symbol = input("type in a stock symbol").upper()
+    investment_amount = float(input("type enter amount you want to invest"))
+    purchase_price = float(input("enter the purchase price of the stock"))
+    investment = {
+        "symbol":stock_symbol,
+        "amount_invested":investment_amount,
+        "purchase_price":purchase_price
+    }
+    save_investment(investment)
+    print("saved investment")
+elif action == "2" :
+    print("These are your investments!")
 
 
 
@@ -69,6 +83,21 @@ def display_investments() :
 
 
 
+
+
+#not needed code
+
+# key_value = {
+# 1:"jo mama",
+# 2:"jo dada",
+# 3:"jo grandma"
+# }
+# print (key_value[1])
+# print("-"*50)
+# print(key_value[2])
+# print("-"*50)
+# print(key_value[3])
+# print("-"*50)
 
 
 
